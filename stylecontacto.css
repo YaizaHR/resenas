@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme */
+    align-items: center; /* Alinear verticalmente */
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+    gap: 20px; /* Espacio entre columnas */
+    margin-bottom: 40px;
+}
+
+.column {
+    width: 45%; /* Ajusta el tamaño de las columnas */
+    text-align: center; /* Centrar contenido */
+    align-items: center;
+    border-radius: 20px;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye las columnas de manera equitativa */
+    align-items: center; /* Alinea el contenido verticalmente */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px;
+}
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+.contact-item {
+    background-color:  rgba(255, 255, 255, 0.863); /* Color de fondo de cada columna */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Alinea el texto al centro */
+    width: 30%; /* Ancho de cada columna */
+}
+
+.contact-item i {
+    font-size: 2rem; /* Tamaño del ícono */
+    color: #000000; /* Color del ícono */
+    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.contact-item p {
+    font-size: 1rem; /* Tamaño de la fuente del texto */
+    color: #000000; /* Color del texto */
+    margin: 0;
+}
+
+.titulo-reseñas {
+    text-align: center;
+    font-size: 2rem;
+    margin: 50px 0 30px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .reviews-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 40px;
+    padding: 30px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    justify-content: center;
+  }
+  
+  .review {
+    scroll-snap-align: center;
+    flex: 0 0 280px;
+    width: 250px;
+    height: 400px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    overflow: hidden;
+  }
+  
+  .review:hover {
+    transform: translateY(-8px);
+  }
+  
+  .review .profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    object-fit: cover;
+  }
+  
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #444;
+  }
+  
+  .review p {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    flex-grow: 1;
+  }
+  
+  .review a {
+    font-size: 0.85rem;
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .review a:hover {
+    text-decoration: underline;
+  }
+  
+  .reviews-container::-webkit-scrollbar {
+    height: 10px;
+  }
+  .reviews-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+  }
+  

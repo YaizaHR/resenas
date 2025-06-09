@@ -1,0 +1,73 @@
+#equipo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 60px;
+  padding: 60px 20px;
+  max-width: 1080px; /* Máximo ancho para que quepan solo 2 tarjetas + gap */
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+.equipo {
+  flex: 0 0 48%; /* Cada tarjeta ocupa cerca del 50%, con espacio para gap */
+  max-width: 500px; /* Limita el tamaño máximo */
+  box-sizing: border-box;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 30px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+.card-frontal {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fefaf0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-revers {
+  background-color: #ffffff;
+  color: #000000;
+  transform: rotateY(180deg);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  #equipo {
+    max-width: 100%;
+  }
+  .equipo {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

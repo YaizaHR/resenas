@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoria Vidal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecontacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="IMAGENES/logow.png" alt="Logo">
+    </div>
+    
+    <!-- Menú de navegación -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav> 
+</header>
+
+<section class="extra-section">
+    <div class="container">
+        <div class="column">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12125.186565094773!2d-3.3363466864278934!3d40.55712604708321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424
+                c8f591ece6d%3A0x3f5f7e41ad666970!2sAsesor%C3%ADa%20Vidal!5e0!3m2!1ses!2ses!4v1742929002387!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                width="100%"
+                height="200"
+                style="border:0; border-radius: 10px;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <h1></h1><i class="fa-solid fa-map-pin"tyle="color: #636363; margin-right: 8px;"></i> Av. de Cervantes, 50, Local 2, 28880 Meco, Madrid</h1>
+        </div>
+        <div class="column">
+                <img src="IMAGENES/horarior.png"
+                width="80%"
+                height="440"
+                style="border:0; border-radius: 10px;">
+               
+        </div>
+    </div>
+  </div>
+</section>
+
+<h2>Puedes contactarnos via</h2>
+
+
+    <div class="contact-container">
+        <div class="contact-item">
+            <i class="fa fa-phone"></i>
+            <p>91 878 26 33</p>
+        </div>
+    <div class="contact-item">
+        <i class="fa fa-envelope"></i>
+        <p>asesoria@sanchezvidalasesores.com</p>
+    </div>
+        <div class="contact-item">
+            <a href="https://www.instagram.com/asesoriavidal/" target="_blank" style= "color: black; text-decoration: none;">
+            <i class="fa-brands fa-instagram"></i>
+            <p>@asesoriavidal</p>
+            </a>
+        </div>
+    </div>
+
+<h2>Y si aún tienes dudas, esto es lo que nuestros clientes opinan</h2>
+
+<script>
+    fetch('/.netlify/functions/get-reviews')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.result && data.result.reviews) {
+          const reviews = data.result.reviews;
+          const container = document.getElementById('reviews');
+          reviews.forEach(r => {
+            const div = document.createElement('div');
+            div.className = 'review';
+            div.innerHTML = `
+              <img src="${r.profile_photo_url}" alt="${r.author_name}" class="profile-img">
+              <div class="review-content">
+                <strong>${r.author_name}</strong> ★${r.rating}<br>
+                <em>${r.relative_time_description}</em>
+                <p>"${r.text}"</p>
+                <a href="${r.author_url}" target="_blank">Ver perfil</a>
+              </div>
+            `;
+            container.appendChild(div);
+          });
+        } else {
+          document.getElementById('reviews').innerHTML = "No hay reseñas disponibles.";
+        }
+      })
+      .catch(err => {
+        console.error("Error al obtener reseñas", err);
+        document.getElementById('reviews').innerHTML = "No se pudieron cargar las reseñas.";
+      });
+
+    const startAutoScroll = () => {
+      const container = document.getElementById('reviews');
+      let scroll = () => {
+        if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+          container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          container.scrollLeft += 1;
+        }
+      };
+      let interval = setInterval(scroll, 30);
+      container.addEventListener('mouseover', () => clearInterval(interval));
+      container.addEventListener('mouseout', () => interval = setInterval(scroll, 30));
+    };
+
+    window.addEventListener('load', startAutoScroll);
+  </script>
+      
+</body>
+</html>

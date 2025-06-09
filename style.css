@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('IMAGENES/paper.png'); /* Ruta a tu imagen */
+    background-repeat: repeat; /* Hace que la textura se repita si es más pequeña que el fondo */
+    background-size: auto; /* Ajusta la textura a su tamaño original */
+
+}
+h2 {
+     margin-top: 50px;  
+     margin-bottom: 50px;
+      font-size: 30px;
+      color:  rgba(106, 153, 133, 0.863);
+      font-weight: bold;
+      text-align: center;
+    }
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 05px 30px;
+    background-color:rgba(106, 153, 133, 0.863);
+    color: #ffffff;
+    position: relative; 
+    z-index: 1000; 
+}
+.logo img {
+    height: 100px; 
+    margin-left: 70px;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.menu li {
+    margin: 0 10px;
+}
+.menu a {
+    color: rgb(254, 250, 240);
+    text-decoration: none;
+    font-size: 22px;
+}
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none; /* Oculta en escritorio */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fefaf0;
+    cursor: pointer;
+}
+
+/* Menú en escritorio (por defecto visible) */
+.nav {
+    display: flex;
+}
+
+/* MEDIA QUERY PARA MÓVILES */
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .menu.active {
+        display: block;
+        position: relative;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: black;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /*  Ahora aparecerá en móviles */
+    }
+    .nav {
+        display: none;
+        flex-direction: row;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        z-index: 9999;
+    }
+
+    /*  Mostrar menú cuando el usuario haga clic */
+    .nav.active {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: black; 
+        text-align: center;
+        padding-top: 60px; 
+        padding-bottom: 10px;
+    }
+    header {
+        position: relative;
+        z-index: 10000; 
+    }
+    .content {
+        display: flex !important; /* Asegura que use Flexbox */
+        flex-direction: column !important; /* Apila los elementos en columna */
+        align-items: center; /* Centra los elementos en la pantalla */
+        gap: 20px; /* Espaciado entre elementos */
+        width: 100%;
+    }
+
+    .text-box, 
+    .video-box {
+        width: 100%; /* Asegura que cada elemento ocupe todo el ancho */
+        text-align: center; /* Centra el texto */
+    }
+}

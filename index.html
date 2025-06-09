@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoria Vidal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <img src="IMAGENES/logow.png" alt="Logo">
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+        <!-- Botón hamburguesa -->
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+</header>
+
+<div class="content">
+    <div class="text-box">
+        <h1>Tu tranquilidad fiscal, laboral y contable en manos de expertas.</h1>
+        <p>Simplificamos tus obligaciones, optimizamos recursos <br> 
+        y garantizamos el cumplimiento normativo, 
+        <br> para que tú solo te enfoques en crecer.</p>
+        <h1>Más de 20 años de experiencia</h1>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    toggleButton.addEventListener("click", function () {
+        nav.classList.toggle("active"); 
+    });
+});
+    </script>
+</div>
+
+    <h2>Nuestras áreas de especialización</h2>
+
+  <div class="imagenes">
+    <a href="servicios.html"><img src="IMAGENES/sociedades.png" alt="Error al cargar la imagen"></a>
+    <a href="servicios.html"><img src="IMAGENES/fiscal.png" alt="Error al cargar la imagen"></a>
+    <a href="servicios.html"><img src="IMAGENES/laboral.png" alt="Error al cargar la imagen"></a>
+    <a href="servicios.html"><img src="IMAGENES/contabilidad.png" alt="Error al cargar la imagen"></a>
+  </div>
+
+  <h2>Y otros servicios</h2>
+
+  <div class="imagenes">
+    <a href="servicios.html"></a><img src="IMAGENES/declaracionrenta.png" alt="Error al cargar la imagen"></a>
+    <a href="servicios.html"></a><img src="IMAGENES/Herencias.png" alt="Error al cargar la imagen"></a>
+  </div>
+
+  <h2>¿Por qué elegirnos?</h2>
+
+    <div class="lastcall-container">
+        <div class="lastcall-item">
+            <i class="fa-solid fa-euro-sign"></i>
+            <p>Precios asequibles</p>
+            <p>Descuentos para desempleados</p>
+        </div>
+    <div class="lastcall-item">
+        <i class="fas fa-phone"></i>
+        <p>Llamanos y pide tu presupuesto</p>
+        <p>sin compromiso</p>
+    </div>
+   
+</body>
+</html>

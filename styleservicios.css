@@ -1,0 +1,153 @@
+#introduccion {
+  text-align: center;
+  padding: 20px 20px 60px 20px;
+}
+
+#introduccion h2 {
+  font-size: 36px;
+  color: rgba(106, 153, 133, 0.9);
+  margin-bottom: 30px;
+}
+
+#introduccion p {
+  font-size: 19px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify; /* Justifica el texto */
+  line-height: 1.8;
+}
+
+/* CONTENEDOR DE SERVICIOS EN ZIGZAG */
+#servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 20px;
+  align-items: center;
+}
+
+.servicio {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.servicio.derecha {
+  justify-content: flex-end;
+}
+
+.caja {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: center; /* Centra los títulos y párrafos por defecto */
+}
+
+.caja:hover {
+  transform: translateY(-6px);
+}
+
+.caja h3 {
+  margin-top: 0;
+  font-size: 26px;
+  color: rgba(106, 153, 133, 0.9);
+  margin-bottom: 16px;
+}
+
+.caja p {
+  margin-bottom: 0;
+  text-align: justify; /* Justifica el texto normal */
+}
+
+/* LISTAS */
+.caja ul {
+  list-style-type: disc;
+  margin: 20px auto 0 auto;
+  padding-left: 30px; /* Alineación correcta de viñetas */
+  text-align: left;   /* Alinea las viñetas a la izquierda */
+  max-width: 100%;
+}
+
+.caja ul li {
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: justify; /* Justifica el contenido del ítem */
+}
+
+
+/* OTROS SERVICIOS CENTRADOS CON CAJA */
+#otros-servicios {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.caja.centrado {
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 30px 40px; /* Menos alto (vertical) */
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 95vw; /* Ocupa casi todo el ancho visible */
+  width: 100%;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.caja.centrado h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: rgba(106, 153, 133, 0.9);
+}
+
+.caja.centrado p {
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.cta-container {
+  background-color: rgba(106, 153, 133, 0.15);
+  padding: 40px 30px;
+  margin: 60px auto;
+  text-align: center;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta-container h2 {
+  font-size: 28px;
+  color: rgba(106, 153, 133, 0.9);
+  margin-bottom: 15px;
+}
+
+.cta-container p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.cta-container a {
+  display: inline-block;
+  background-color: rgba(106, 153, 133, 0.863);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-container a:hover {
+  background-color: rgba(91, 132, 115, 0.95);
+}
