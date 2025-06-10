@@ -136,4 +136,9 @@ header {
         width: 100%; /* Asegura que cada elemento ocupe todo el ancho */
         text-align: center; /* Centra el texto */
     }
+    .logo img {
+    height: 60px;
+    margin-left: 10px;
+    }
+    
 }
