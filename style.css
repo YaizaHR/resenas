@@ -1,144 +1,243 @@
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body y fondo */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('IMAGENES/paper.png'); /* Ruta a tu imagen */
-    background-repeat: repeat; /* Hace que la textura se repita si es más pequeña que el fondo */
-    background-size: auto; /* Ajusta la textura a su tamaño original */
-
+    background-image: url('IMAGENES/paper.png');
+    background-repeat: repeat;
+    background-size: auto;
 }
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    color: #6a9985dd;
+    text-align: center;
+    margin: 20px 10px;
+}
+
 h2 {
-     margin-top: 50px;  
-     margin-bottom: 50px;
-      font-size: 30px;
-      color:  rgba(106, 153, 133, 0.863);
-      font-weight: bold;
-      text-align: center;
-    }
+    font-size: 30px;
+    color: rgba(106, 153, 133, 0.86);
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 10px;
+}
 
 /* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 05px 30px;
-    background-color:rgba(106, 153, 133, 0.863);
-    color: #ffffff;
-    position: relative; 
-    z-index: 1000; 
+    padding: 5px 30px;
+    background-color: rgba(106, 153, 133, 0.86);
+    color: #fff;
+    position: relative;
+    z-index: 1000;
 }
+
 .logo img {
-    height: 100px; 
+    height: 100px;
     margin-left: 70px;
 }
+
+/* Menú */
 .menu {
     list-style: none;
     display: flex;
     gap: 20px;
 }
+
 .menu li {
     margin: 0 10px;
 }
+
 .menu a {
     color: rgb(254, 250, 240);
     text-decoration: none;
     font-size: 22px;
 }
+
 .menu a:hover {
     text-decoration: underline;
 }
 
+/* Botón hamburguesa */
 .menu-toggle {
-    display: none; /* Oculta en escritorio */
-    font-size: 24px;
+    display: none;
+    font-size: 28px;
     background: none;
     border: none;
     color: #fefaf0;
     cursor: pointer;
 }
 
-/* Menú en escritorio (por defecto visible) */
-.nav {
+/* Contenido principal */
+.content {
     display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
 }
 
-/* MEDIA QUERY PARA MÓVILES */
+.text-box {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Imágenes */
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.imagenes img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imagenes img:hover {
+    transform: scale(1.05);
+}
+
+/* Última sección */
+.lastcall-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 20px;
+}
+
+.lastcall-item {
+    text-align: center;
+    max-width: 250px;
+}
+
+.lastcall-item i {
+    font-size: 40px;
+    color: #6a9985dd;
+    margin-bottom: 15px;
+}
+
+/* MEDIA QUERY para dispositivos móviles */
 @media (max-width: 768px) {
-    .menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background: black;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        text-align: center;
-        gap: 10px;
-        padding: 0;
+    .logo img {
+        height: 60px;
+        margin-left: 10px;
     }
 
-    .menu.active {
-        display: block;
-        position: relative;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: black;
-        text-align: center;
-        padding: 10px 0;
+    h1 {
+        font-size: 1.8rem;
+        margin: 15px 5px;
     }
 
+    h2 {
+        font-size: 20px;
+        margin: 30px 10px;
+    }
+
+    header {
+        padding: 5px 15px;
+    }
+
+    /* Mostrar botón hamburguesa */
     .menu-toggle {
-        display: block; /*  Ahora aparecerá en móviles */
+        display: block;
+        margin-right: 15px;
     }
+
+    /* Ocultar menú por defecto */
     .nav {
         display: none;
-        flex-direction: row;
         position: absolute;
+        top: 80px;
         left: 0;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.9);
         text-align: center;
         z-index: 9999;
+        flex-direction: column;
+        padding: 10px 0;
     }
 
-    /*  Mostrar menú cuando el usuario haga clic */
+    /* Mostrar menú activo */
     .nav.active {
-        display: block;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: black; 
-        text-align: center;
-        padding-top: 60px; 
-        padding-bottom: 10px;
-    }
-    header {
-        position: relative;
-        z-index: 10000; 
-    }
-    .content {
-        display: flex !important; /* Asegura que use Flexbox */
-        flex-direction: column !important; /* Apila los elementos en columna */
-        align-items: center; /* Centra los elementos en la pantalla */
-        gap: 20px; /* Espaciado entre elementos */
-        width: 100%;
+        display: flex;
     }
 
-    .text-box, 
-    .video-box {
-        width: 100%; /* Asegura que cada elemento ocupe todo el ancho */
-        text-align: center; /* Centra el texto */
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
     }
-    .logo img {
-    height: 60px;
-    margin-left: 10px;
+
+    .menu li {
+        margin: 0;
     }
-    
+
+    .menu a {
+        font-size: 20px;
+        padding: 10px 0;
+        display: block;
+    }
+
+    /* Contenido en columna y centrado */
+    .content {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Imágenes apiladas y centradas */
+    .imagenes {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .imagenes img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Ajuste última sección */
+    .lastcall-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px 10px;
+    }
+
+    .lastcall-item {
+        max-width: 100%;
+    }
+}
+
+/* En escritorio ocultar botón hamburguesa */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: flex !important;
+        position: static;
+        background: none;
+        padding: 0;
+        width: auto;
+        flex-direction: row;
+    }
 }
