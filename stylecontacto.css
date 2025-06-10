@@ -136,7 +136,7 @@
 }
 .reviews-container::-webkit-scrollbar-thumb {
     background: #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* Media queries para pantallas pequeñas */
