@@ -13,14 +13,6 @@ body {
     background-size: auto;
 }
 
-/* Títulos */
-h1 {
-    font-size: 2.5rem;
-    color: #000000dd;
-    text-align: center;
-    margin: 20px 10px;
-}
-
 h2 {
     font-size: 30px;
     color: rgba(106, 153, 133, 0.86);
