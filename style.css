@@ -233,3 +233,14 @@ header {
         flex-direction: row;
     }
 }
+@media (max-width: 1024px) {
+    .otherservice-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .otherservice-item {
+        width: 100%;
+    }
+}

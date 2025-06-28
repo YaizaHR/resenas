@@ -29,8 +29,6 @@
         <!-- Botón hamburguesa -->
     <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 </header>
-
-  <body>
   <div id="equipo">
     <div class="equipo">
       <div class="card-container">
@@ -72,5 +70,15 @@
       </div>
     </div>
   </div>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    toggleButton.addEventListener("click", function () {
+        nav.classList.toggle("active"); 
+    });
+});
+</script>
 </body>
 </html>
