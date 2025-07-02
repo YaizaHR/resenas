@@ -173,7 +173,6 @@
     border-radius: 10px;
 }
 
-/* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
     .container {
         flex-wrap: wrap;
