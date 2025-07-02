@@ -88,5 +88,7 @@
     .content {
         padding: 30px 15px;
         margin: 60px auto;
+        min-height: 400px;
+
     }
 }
