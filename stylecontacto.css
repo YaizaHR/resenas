@@ -10,8 +10,10 @@
 }
 
 .column {
-    flex: 1 1 300px;
-    max-width: 600px;
+    width: 45%;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
 }
 
 .map-image {
