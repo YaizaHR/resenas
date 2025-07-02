@@ -3,50 +3,44 @@
     margin: 0 auto 40px;
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* columnas con misma altura */
-    flex-wrap: wrap;       /* Permite ajuste si no caben */
+    align-items: stretch; /* Cambiado para que columnas tengan la misma altura */
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-/* Añadido espacio entre header y esta sección */
-.extra-section {
-    margin-top: 40px; /* Ajusta este valor para separar más o menos */
-}
-
 .column {
-    flex: 1 1 45%;         /* Ocupa hasta 45% y crece/encoge */
+    flex: 1 1 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-/* Imagen del horario */
-.horario-img {
-    width: 100%;
-    height: 100%;          /* Que ocupe toda la altura de la columna */
-    max-width: none;       /* Para evitar límite */
-    border-radius: 10px;
-    object-fit: cover;     /* Mantener proporción y recortar si hace falta */
-}
-
-/* Mapa responsive */
 .map-responsive {
     position: relative;
     width: 100%;
-    height: 100%;          /* Ocupa toda la altura disponible en la columna */
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    flex-grow: 1; /* Permite que esta columna ocupe toda la altura */
 }
 
-/* Hacer que iframe ocupe todo el contenedor */
 .map-responsive iframe {
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+.column .horario-img {
+    width: 100%;
+    height: 100%;        /* Ocupa toda la altura disponible */
+    object-fit: cover;   /* Para que llene el cuadro y recorte si hace falta */
+    border-radius: 10px;
+    flex-grow: 1;        /* Para que tome la misma altura que el mapa */
 }
 
 .direccion {
