@@ -13,8 +13,9 @@ body {
     background-size: auto;
 }
 
+/* Títulos */
 h2 {
-    font-size: 30px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: rgba(106, 153, 133, 0.86);
     font-weight: bold;
     text-align: center;
@@ -39,10 +40,15 @@ header {
 }
 
 /* Menú */
+.nav {
+    display: flex;
+}
+
 .menu {
     list-style: none;
     display: flex;
     gap: 20px;
+    flex-direction: row;
 }
 
 .menu li {
@@ -67,6 +73,10 @@ header {
     border: none;
     color: #fefaf0;
     cursor: pointer;
+}
+
+.menu-toggle:focus {
+    outline: 2px dashed #fff;
 }
 
 /* Contenido principal */
@@ -123,7 +133,7 @@ header {
     margin-bottom: 15px;
 }
 
-/* MEDIA QUERY para dispositivos móviles */
+/* Responsive - Dispositivos móviles */
 @media (max-width: 768px) {
     .logo img {
         height: 60px;
@@ -136,7 +146,7 @@ header {
     }
 
     h2 {
-        font-size: 20px;
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
         margin: 30px 10px;
     }
 
@@ -164,7 +174,6 @@ header {
         padding: 10px 0;
     }
 
-    /* Mostrar menú activo */
     .nav.active {
         display: flex;
     }
@@ -185,7 +194,7 @@ header {
         display: block;
     }
 
-    /* Contenido en columna y centrado */
+    /* Contenido principal */
     .content {
         flex-direction: column !important;
         align-items: center;
@@ -194,7 +203,7 @@ header {
         padding: 10px;
     }
 
-    /* Imágenes apiladas y centradas */
+    /* Imágenes */
     .imagenes {
         flex-direction: column;
         gap: 15px;
@@ -206,7 +215,7 @@ header {
         margin: 0 auto;
     }
 
-    /* Ajuste última sección */
+    /* Última sección */
     .lastcall-container {
         flex-direction: column;
         gap: 25px;
@@ -218,7 +227,7 @@ header {
     }
 }
 
-/* En escritorio ocultar botón hamburguesa */
+/* Escritorio: mantener nav visible y ocultar hamburguesa */
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
@@ -233,6 +242,8 @@ header {
         flex-direction: row;
     }
 }
+
+/* Otros tamaños específicos */
 @media (max-width: 1024px) {
     .otherservice-item {
         width: 45%;
