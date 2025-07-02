@@ -1,49 +1,53 @@
-/* Contenedor columnas */
 .container {
+    max-width: 1200px;
+    margin: 0 auto 40px;
     display: flex;
-    justify-content: center; /* Centrar contenido horizontalmente */
-    align-items: flex-start; /* Alinear arriba para que estén en línea */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;       /* Permite ajuste si no caben */
     gap: 20px;
-    margin-bottom: 40px;
-    flex-wrap: nowrap; /* No envolver en desktop */
 }
 
 .column {
-    width: 50%;
-    text-align: center;
+    flex: 1 1 45%;         /* Ocupa hasta 45% y crece/encoge */
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 20px;
+    text-align: center;
 }
 
-/* Imagen horario ajustada */
+/* Imagen del horario */
 .horario-img {
     width: 100%;
-    max-width: 400px;  /* Máximo ancho razonable */
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
     object-fit: contain;
 }
 
-/* Estilos para mapa */
+/* Mapa responsive */
 .map-responsive {
     position: relative;
-    padding-bottom: 56.25%; /* Relación 16:9 */
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    margin-bottom: 20px;
 }
 
 .map-responsive iframe {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+.direccion {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #333;
 }
 
 /* Contenedor contacto */
