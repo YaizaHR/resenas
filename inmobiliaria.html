@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoria Vidal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <img src="IMAGENES/logow.png" alt="Logo">
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+        <!-- Botón hamburguesa -->
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+</header>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    toggleButton.addEventListener("click", function () {
+        nav.classList.toggle("active"); 
+    });
+});
+</script> 
+</body>
+</html>
