@@ -121,7 +121,6 @@ header {
         height: 60px;
         margin-left: 10px;
     }
-}
 
     h1 {
         font-size: 1.8rem;
@@ -162,8 +161,8 @@ header {
     }
 
     .menu {
-        flex-direction: row;
-        gap: 15px;
+        flex-direction: column;
+        gap: 10px;
         padding: 0;
     }
 
@@ -197,7 +196,7 @@ header {
         max-width: 90%;
         margin: 0 auto;
     }
-
+}
 /* Escritorio: mantener nav visible y ocultar hamburguesa */
 @media (min-width: 769px) {
     .menu-toggle {
