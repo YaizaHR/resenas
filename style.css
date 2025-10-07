@@ -16,7 +16,7 @@ body {
 /* Títulos */
 h2 {
     font-size: clamp(1.5rem, 3vw, 2rem);
-    color: rgba(106, 153, 133, 0.86);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-align: center;
     margin: 50px 10px;
@@ -27,8 +27,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 30px;
-    background-color: rgba(106, 153, 133, 0.86);
+    padding: 10px 50px;
+    background-color: rgb(114, 114, 114);
     color: #fff;
     position: relative;
     z-index: 1000;
@@ -42,6 +42,7 @@ header {
 /* Menú */
 .nav {
     display: flex;
+    margin-left: auto;
 }
 
 .menu {
@@ -58,7 +59,7 @@ header {
 .menu a {
     color: rgb(254, 250, 240);
     text-decoration: none;
-    font-size: 22px;
+    font-size: 26px;
 }
 
 .menu a:hover {
@@ -114,31 +115,13 @@ header {
     transform: scale(1.05);
 }
 
-/* Última sección */
-.lastcall-container {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    padding: 40px 20px;
-}
-
-.lastcall-item {
-    text-align: center;
-    max-width: 250px;
-}
-
-.lastcall-item i {
-    font-size: 40px;
-    color: #6a9985dd;
-    margin-bottom: 15px;
-}
-
 /* Responsive - Dispositivos móviles */
 @media (max-width: 768px) {
     .logo img {
         height: 60px;
         margin-left: 10px;
     }
+}
 
     h1 {
         font-size: 1.8rem;
@@ -179,7 +162,7 @@ header {
     }
 
     .menu {
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
         padding: 0;
     }
@@ -205,7 +188,7 @@ header {
 
     /* Imágenes */
     .imagenes {
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
         padding: 10px;
     }
@@ -214,18 +197,6 @@ header {
         max-width: 90%;
         margin: 0 auto;
     }
-
-    /* Última sección */
-    .lastcall-container {
-        flex-direction: column;
-        gap: 25px;
-        padding: 20px 10px;
-    }
-
-    .lastcall-item {
-        max-width: 100%;
-    }
-}
 
 /* Escritorio: mantener nav visible y ocultar hamburguesa */
 @media (min-width: 769px) {
