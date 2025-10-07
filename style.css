@@ -161,19 +161,23 @@ header {
     }
 
     .menu {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
         padding: 0;
-    }
-
-    .menu li {
         margin: 0;
     }
 
+    .menu li {
+        width: 100%;
+    }
+
     .menu a {
+        display: block;
+        width: 100%;
         font-size: 20px;
         padding: 10px 0;
-        display: block;
     }
 
     /* Contenido principal */
