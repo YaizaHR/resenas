@@ -102,9 +102,11 @@
 
 @media (max-width: 768px) {
     .content {
-        padding: 30px 15px;
         margin: 60px auto;
-        min-height: 400px;
+        padding: 30px 15px;
+    }
 
+    .text-box {
+        padding: 15px 20px;
     }
 }
