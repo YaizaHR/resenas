@@ -36,7 +36,7 @@
     left: 50%;
     width: 100vw;        /* 100% del ancho de la pantalla */
     height: 100%;        /* igual a la altura del texto */
-    background-color: #c4c4c4; /* color de la franja */
+    background-color: #ffe6c491; /* color de la franja */
     z-index: -1;         /* detrás del texto */
     transform: translateX(-50%); /* centra la franja */
 }
