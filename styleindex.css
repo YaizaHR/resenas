@@ -67,38 +67,7 @@
     transform: translateY(-5px);
 }
 
-.lastcall-container {
-    display: flex;
-    justify-content: center; /* Distribuye las columnas de manera equitativa */
-    align-items: center; /* Alinea el contenido verticalmente */
-    gap: 20px; /* Espacio entre las columnas */
-    padding: 20px;
-    flex-wrap: wrap; /*  Importante para que se adapten en pantallas pequeñas */
-    transition: transform 0.3s;   /* Animación suave si se desea hover */
-}
 
-.lastcall-item {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.568);
-    background-color: rgba(222, 184, 135, 0.755);
-    padding: 15px;
-    border-radius: 10px; /* Bordes redondeados */
-    text-align: center; /* Alinea el texto al centro */
-    width: 22%; /* Ancho de cada columna */
-    min-width: 180px;
-    margin-bottom: 50px;
-}
-
-.lastcall-item i {
-    font-size: 2rem; /* Tamaño del ícono */
-    color: #000000; /* Color del ícono */
-    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
-}
-
-.lastcall-item p {
-    font-size: 1rem; /* Tamaño de la fuente del texto */
-    color: #000000; /* Color del texto */
-    margin: 0;
-}
 
 @media (max-width: 768px) {
     .content {
