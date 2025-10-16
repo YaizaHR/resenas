@@ -7,20 +7,51 @@
     flex-wrap: wrap;       /* Permite ajuste si no caben */
     gap: 20px;
 }
-.extra-section {
-  margin-top: 40px;
+
+.horario-section {
+  margin-top: 80px; /* separación de la cabecera */
+  width: 100%;
+  background-color: rgba(200, 200, 200, 0.85); /* gris claro translúcido */
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  padding: 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.horario-container {
+  text-align: center;
+  max-width: 800px;
+}
+
+.horario-container h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;         /* título grande */
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-decoration: underline; /* subrayado */
+  letter-spacing: 0.5px;       /* opcional, mejora legibilidad */
+}
+
+.horario-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;          /* letras más grandes que antes */
+  color: #ffffff;
+  line-height: 2;
+}
+
+.horario-container ul li {
+  margin: 10px 0;
+}
+/* Mapa debajo del horario */
+.map-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .map-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
   max-width: 800px;
   width: 100%;
 }
@@ -42,32 +73,13 @@
   border: 0;
 }
 
-.horario {
-  background-color: rgba(255, 245, 230, 0.9); /* blanco hueso translúcido */
-  padding: 20px 25px;
-  border-radius: 10px;
-  text-align: center;
-  width: fit-content; /* solo ocupa lo que necesita el contenido */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.horario h4 {
-  margin-bottom: 10px;
-  color: #6a9985; /* color principal de la web */
-  font-size: 1.5rem;
-}
-
-.horario ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-.horario ul li {
-  margin: 5px 0;
+.extra-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
 /* Añadido espacio entre header y esta sección */
@@ -199,22 +211,20 @@
         align-items: center;
     }
 
-  .map-container {
-    max-width: 95%;
-    gap: 15px;
+  .horario-section {
+    padding: 30px 15px;
   }
 
-  .horario {
-    width: 100%;
-    padding: 15px;
+  .horario-container h2 {
+    font-size: 2rem;
   }
 
-  .horario h4 {
-    font-size: 1.25rem;
+  .horario-container ul {
+    font-size: 1.1rem;
   }
 
-  .horario ul li {
-    font-size: 0.95rem;
+  .map-section {
+    padding: 30px 15px;
   }
 
     .contact-container {
