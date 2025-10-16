@@ -1,45 +1,27 @@
 .content {
     width: 100%;
     padding: 40px 20px;
-    border-radius: 0px;
-    position: relative;
-    overflow: hidden;
-    margin: 100px auto;
     display: flex;
     flex-direction: column; /* En móvil es más seguro apilar */
     justify-content: center;
     align-items: center;
-
-    /* Quitamos la imagen */
-    background: none;
-    opacity: 1;
+    margin: 100px auto;
+    position: relative;
 }
 
-/* Caja de texto con franja detrás */
 .text-box {
     padding: 20px 30px;
-    border-radius: 8px;
+    border-radius: 15px;
     font-size: 14px;
     text-align: center;
     color: #000000;
     max-width: 600px;
+    background-color: rgba(255, 245, 230, 0.85); /* blanco hueso con transparencia */
+    display: inline-block;  /* La caja ocupa solo el tamaño del texto */
     position: relative;
     z-index: 1;
-    width: 100%;
 }
 
-/* 🔹 Franja de fondo que ocupa todo el ancho del viewport */
-.text-box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100vw;        /* 100% del ancho de la pantalla */
-    height: 100%;        /* igual a la altura del texto */
-    background-color: #ffd69c91; /* color de la franja */
-    z-index: -1;         /* detrás del texto */
-    transform: translateX(-50%); /* centra la franja */
-}
 
 /* Texto */
 .text-box p {
