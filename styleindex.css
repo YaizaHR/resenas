@@ -9,28 +9,44 @@
     flex-direction: column; /* En móvil es más seguro apilar */
     justify-content: center;
     align-items: center;
-    background-image: url('IMAGENES/apretons.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.95;
+
+    /* Quitamos la imagen */
+    background: none;
+    opacity: 1;
 }
 
-
+/* Caja de texto con franja detrás */
 .text-box {
     padding: 20px 30px;
     border-radius: 8px;
     font-size: 14px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #000000;
     max-width: 600px;
     position: relative;
     z-index: 1;
+    width: 100%;
 }
+
+/* 🔹 Franja de fondo que ocupa todo el ancho del viewport */
+.text-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;        /* 100% del ancho de la pantalla */
+    height: 100%;        /* igual a la altura del texto */
+    background-color: #c4c4c4; /* color de la franja */
+    z-index: -1;         /* detrás del texto */
+    transform: translateX(-50%); /* centra la franja */
+}
+
+/* Texto */
 .text-box p {
-    font-size: 20px; /* o 30px o más, según lo que necesites */
-    line-height: 1.5; /* mejora la legibilidad */
+    font-size: 20px;
+    line-height: 1.5;
 }
+
 
 .imagenes {
     display: flex;
