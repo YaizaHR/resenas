@@ -93,63 +93,49 @@
 <h2>Y si aún tienes dudas, esto es lo que nuestros clientes opinan</h2>
     
 <div id="reviews" class="reviews-container"></div>
+
 <script>
-  fetch('/.netlify/functions/get-reviews')
-    .then(res => res.json())
-    .then(data => {
-      if (data && data.result && data.result.reviews) {
-        const reviews = data.result.reviews;
-        const container = document.getElementById('reviews');
-        reviews.forEach(r => {
-          const div = document.createElement('div');
-          div.className = 'review';
-          div.innerHTML = `
-            <img src="${r.profile_photo_url}" alt="${r.author_name}" class="profile-img">
-            <div class="review-content">
-              <strong>${r.author_name}</strong> ★${r.rating}<br>
-              <em>${r.relative_time_description}</em>
-              <p>"${r.text}"</p>
-              <a href="${r.author_url}" target="_blank">Ver perfil</a>
-            </div>
-          `;
-          container.appendChild(div);
-        });
-      } else {
-        document.getElementById('reviews').innerHTML = "No hay reseñas disponibles.";
-      }
-    })
-    .catch(err => {
-      console.error("Error al obtener reseñas", err);
-      document.getElementById('reviews').innerHTML = "No se pudieron cargar las reseñas.";
-    });
+async function fetchReviews() {
+  try {
+    const res = await fetch('/data/reviews.json');
+    if (!res.ok) throw new Error('No se pudo cargar el archivo JSON');
+    const data = await res.json();
+    return data.reviews || [];
+  } catch (err) {
+    console.error('Error al cargar las reseñas:', err);
+    return [];
+  }
+}
 
-  // Auto-scroll
-  const startAutoScroll = () => {
-    const container = document.getElementById('reviews');
-    let scroll = () => {
-      if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
-        container.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        container.scrollLeft += 1;
-      }
-    };
-    let interval = setInterval(scroll, 30);
-    container.addEventListener('mouseover', () => clearInterval(interval));
-    container.addEventListener('mouseout', () => interval = setInterval(scroll, 30));
-  };
+function renderReviews(reviews) {
+  const container = document.getElementById('reviews');
+  container.innerHTML = '';
+  if (!reviews.length) {
+    container.innerHTML = 'No hay reseñas disponibles.';
+    return;
+  }
+  reviews.forEach(r => {
+    const div = document.createElement('div');
+    div.className = 'review';
+    div.innerHTML = `
+      <img src="${r.profile_photo_url}" alt="${r.author_name}" class="profile-img">
+      <div class="review-content">
+        <strong>${r.author_name}</strong> ★${r.rating}<br>
+        <em>${r.relative_time_description}</em>
+        <p>"${r.text}"</p>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
 
-  window.addEventListener('load', startAutoScroll);
+// Cargar reseñas al cargar la página
+(async () => {
+  const reviews = await fetchReviews();
+  renderReviews(reviews);
+})();
 </script>
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".nav");
 
-    toggleButton.addEventListener("click", function () {
-        nav.classList.toggle("active"); 
-    });
-});
-</script>
       
 </body>
 </html>
