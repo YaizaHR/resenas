@@ -215,6 +215,53 @@
     border-radius: 10px;
 }
 
+/* Contenedor principal */
+.reviews-wrapper {
+  position: relative;
+  max-width: 1000px;  
+  margin: 0 auto;
+  /* padding interno ya aplicado en reviews-container */
+}
+
+
+/* Contenedor de reseñas */
+.reviews-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  padding: 20px 60px; /* <--- aumenta el padding horizontal */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Botones de scroll */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.scroll-btn.prev { 
+  left: -20px;  /* coloca un poco fuera del wrapper, totalmente visible */
+}
+.scroll-btn.next { 
+  right: -20px; 
+}
+
+.scroll-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+
 
 @media (max-width: 768px) {
     .container {

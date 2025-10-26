@@ -92,7 +92,12 @@
 
 <h2>Y si aún tienes dudas, esto es lo que nuestros clientes opinan</h2>
     
-<div id="reviews" class="reviews-container"></div>
+<div class="reviews-wrapper">
+  <button class="scroll-btn prev">&#10094;</button>
+  <div id="reviews" class="reviews-container"></div>
+  <button class="scroll-btn next">&#10095;</button>
+</div>
+
   <script>
     async function fetchReviews() {
       try {
@@ -134,6 +139,14 @@
       const reviews = await fetchReviews();
       renderReviews(reviews);
     })();
+    const container = document.getElementById('reviews');
+document.querySelector('.scroll-btn.prev').addEventListener('click', () => {
+  container.scrollBy({ left: -300, behavior: 'smooth' });
+});
+document.querySelector('.scroll-btn.next').addEventListener('click', () => {
+  container.scrollBy({ left: 300, behavior: 'smooth' });
+});
+
   </script>
 
 </body>
