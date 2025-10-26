@@ -175,7 +175,7 @@
 /* Nombre del autor */
 .review .author-name {
     font-weight: bold;
-    color: #111;
+    color: #000000a2;
     font-size: 1rem;
     flex: 1;
 }
@@ -190,7 +190,7 @@
 /* Contenido de la reseña */
 .review .review-content {
     font-size: 0.95rem;
-    color: #333;
+    color: #9e9e9e;
     line-height: 1.5;
     flex-grow: 1;
 }

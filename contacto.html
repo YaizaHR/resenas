@@ -93,48 +93,48 @@
 <h2>Y si aún tienes dudas, esto es lo que nuestros clientes opinan</h2>
     
 <div id="reviews" class="reviews-container"></div>
+  <script>
+    async function fetchReviews() {
+      try {
+        const res = await fetch('/data/reviews.json');
+        if (!res.ok) throw new Error('No se pudo cargar el archivo JSON');
+        const data = await res.json();
+        return data.reviews || [];
+      } catch (err) {
+        console.error('Error al cargar las reseñas:', err);
+        return [];
+      }
+    }
 
-<script>
-async function fetchReviews() {
-  try {
-    const res = await fetch('/data/reviews.json');
-    if (!res.ok) throw new Error('No se pudo cargar el archivo JSON');
-    const data = await res.json();
-    return data.reviews || [];
-  } catch (err) {
-    console.error('Error al cargar las reseñas:', err);
-    return [];
-  }
-}
+    function renderReviews(reviews) {
+      const container = document.getElementById('reviews');
+      container.innerHTML = '';
+      if (!reviews.length) {
+        container.innerHTML = 'No hay reseñas disponibles.';
+        return;
+      }
+      reviews.forEach(r => {
+        const div = document.createElement('div');
+        div.className = 'review';
+        div.innerHTML = `
+          <div class="review-header">
+            <span class="author-name">${r.author_name}</span>
+            <span class="rating">★${r.rating}</span>
+          </div>
+          <div class="review-content">
+            <p>"${r.text}"</p>
+            <em>${r.relative_time_description}</em>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
 
-function renderReviews(reviews) {
-  const container = document.getElementById('reviews');
-  container.innerHTML = '';
-  if (!reviews.length) {
-    container.innerHTML = 'No hay reseñas disponibles.';
-    return;
-  }
-  reviews.forEach(r => {
-    const div = document.createElement('div');
-    div.className = 'review';
-    div.innerHTML = `
-      <img src="${r.profile_photo_url}" alt="${r.author_name}" class="profile-img">
-      <div class="review-content">
-        <strong>${r.author_name}</strong> ★${r.rating}<br>
-        <em>${r.relative_time_description}</em>
-        <p>"${r.text}"</p>
-      </div>
-    `;
-    container.appendChild(div);
-  });
-}
-
-// Cargar reseñas al cargar la página
-(async () => {
-  const reviews = await fetchReviews();
-  renderReviews(reviews);
-})();
-</script>
+    (async () => {
+      const reviews = await fetchReviews();
+      renderReviews(reviews);
+    })();
+  </script>
 
 </body>
 </html>

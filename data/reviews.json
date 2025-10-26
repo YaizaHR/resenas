@@ -13,14 +13,14 @@
       "author_name": "Isabel Cavadas",
       "rating": 5,
       "relative_time_description": "hace 3 semanas",
-      "text": "Trato genial, me encanta, te ayudan en todo. Lo recomiendo 100 %.",
+      "text": "Trato genial, me encanta, te ayudan en todo. Lo recomiendo 100 %. ",
       "author_url": "#"
     },
     {
       "author_name": "Víctor Sánchez López-Hermoso",
       "rating": 5,
       "relative_time_description": "hace 8 meses",
-      "text": "Asesoría Vidal lleva gestionándome toda mi operativa desde que me di de alta de autónomo hará unos 4 años y no puedo decir nada más que son unas profesionales excelentes. Recomendadas al 100 %.",
+      "text": "Asesoría Vidal lleva gestionándome toda mi operativa desde que me di de alta de autónomo hará unos 4 años y no puedo decir nada más que son unas profesionales excelentes. Recomendadas al 100 %. ",
       "author_url": "#"
     },
     {
@@ -30,12 +30,41 @@
       "text": "Agradeceros vuestra labor diaria, vuestra profesionalidad a la par que simpatía. Confianza 100 %, siempre buscando las mejores opciones para sus clientes.",
       "author_url": "#"
     },
-    {
+     {
       "author_name": "MaríaJota Cerván",
       "rating": 5,
       "relative_time_description": "hace 8 meses",
-      "text": "¡Un equipo de primera! Siempre dispuesto a resolver de la manera más favorable en beneficio de sus clientes. Lo recomiendo al 100 %.",
+      "text": "¡Un equipo de primera! Siempre dispuesto a resolver de la manera más favorable en beneficio de sus clientes. Lo recomiendo al 100 %. ",
       "author_url": "#"
-    }
+    },
+     {
+      "author_name": "Hilario HC",
+      "rating": 5,
+      "relative_time_description": "hace 8 meses",
+      "text": "un gran equipo eficaz y efectivo. buen trato y rapidez ",
+      "author_url": "#"
+    },
+   {
+      "author_name": "Cautar Mohamed",
+      "rating": 5,
+      "relative_time_description": "hace 8 meses",
+      "text": "Siempre disponibles y profesionales!!!el trato inmejorable de todas las chicas son 100% de mi confianza!!!!",
+      "author_url": "#"
+    },
+    {
+      "author_name": "Costel Tocario",
+      "rating": 5,
+      "relative_time_description": "hace 8 meses",
+      "text": "PROFESIONALES.",
+      "author_url": "#"
+    },
+    {
+      "author_name": "Yaiza Hernandez",
+      "rating": 5,
+      "relative_time_description": "hace 10 meses",
+      "text": "Atención perfecta y muy profesionales con precios muy competitivos! Súper recomendables. ",
+      "author_url": "#"
+    } 
   ]
 }
+
