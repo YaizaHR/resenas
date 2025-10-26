@@ -136,9 +136,11 @@
     }
 
     (async () => {
-      const reviews = await fetchReviews();
-      renderReviews(reviews);
-    })();
+  const reviews = await fetchReviews();
+  console.log(reviews); // <- añade esto para verificar
+  renderReviews(reviews);
+})();
+
     const container = document.getElementById('reviews');
 document.querySelector('.scroll-btn.prev').addEventListener('click', () => {
   container.scrollBy({ left: -300, behavior: 'smooth' });
@@ -146,7 +148,6 @@ document.querySelector('.scroll-btn.prev').addEventListener('click', () => {
 document.querySelector('.scroll-btn.next').addEventListener('click', () => {
   container.scrollBy({ left: 300, behavior: 'smooth' });
 });
-
   </script>
 
 </body>

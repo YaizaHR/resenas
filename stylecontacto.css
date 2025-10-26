@@ -138,7 +138,6 @@
     padding: 30px;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    justify-content: center;
 }
 
 /* Cada reseña */
@@ -218,7 +217,7 @@
 /* Contenedor principal */
 .reviews-wrapper {
   position: relative;
-  max-width: 1000px;  
+  max-width: 1200px;  
   margin: 0 auto;
   /* padding interno ya aplicado en reviews-container */
 }
@@ -229,7 +228,7 @@
   display: flex;
   overflow-x: auto;
   gap: 30px;
-  padding: 20px 60px; /* <--- aumenta el padding horizontal */
+  padding: 20px 60px; /* espacio a los lados para botones */
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
