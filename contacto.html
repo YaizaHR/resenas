@@ -149,6 +149,18 @@ document.querySelector('.scroll-btn.next').addEventListener('click', () => {
   container.scrollBy({ left: 300, behavior: 'smooth' });
 });
   </script>
+    
+   <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
 
+    toggleButton.addEventListener("click", function () {
+        nav.classList.toggle("active"); 
+    });
+});
+</script>
+    
 </body>
 </html>
+
