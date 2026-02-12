@@ -40,7 +40,7 @@
 .text-box h1 {
     font-size: clamp(2rem, 4vw, 2.6rem);
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: 700;
 }
 
@@ -58,12 +58,13 @@
     margin-bottom: 25px;
     text-aling: left;
     font-weight: 600;
-    color: #727272;
+    color: #5A5A5A;
 }
 
 .experience {
     font-size: 1.2rem;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .imagenes {
@@ -118,6 +119,7 @@
 }
 
 }
+
 
 
 
