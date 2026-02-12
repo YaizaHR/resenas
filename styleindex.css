@@ -87,7 +87,7 @@
     transform: translateY(-5px);
 }
 .cta-btn {
-    display: inline-block;
+    display: flex;
     background-color: #727272;
     color: #fff;
     padding: 12px 28px;
@@ -122,6 +122,7 @@
 }
 
 }
+
 
 
 
