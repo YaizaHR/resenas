@@ -55,7 +55,7 @@
 .text-box h3 {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-aling: left;
     font-weight: 600;
     color: #5A5A5A;
@@ -64,7 +64,7 @@
 .experience {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin: 10px 25px;
 }
 
 .imagenes {
@@ -119,6 +119,7 @@
 }
 
 }
+
 
 
 
