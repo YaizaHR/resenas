@@ -93,7 +93,7 @@
     padding: 12px 28px;
     border-radius: 30px;
     text-decoration: none;
-    aling-item: center;
+    justify-content: center;
     margin-bottom: 40px;
     font-weight: 600;
     transition: 0.3s ease;
@@ -122,6 +122,7 @@
 }
 
 }
+
 
 
 
