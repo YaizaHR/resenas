@@ -45,10 +45,20 @@
 }
 
 .text-box p {
-    font-size: 1.15rem; /* baja un poco desde 20px */
+    font-size: 1rem; /* baja un poco desde 20px */
     line-height: 1.6;
     margin-bottom: 25px;
-    color: #333;
+    color: #727272;
+    text-aling: left;
+}
+
+.text-box h2 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-aling: left;
+    font-weight: 600;
+    color: #727272;
 }
 
 .experience {
