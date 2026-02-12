@@ -51,6 +51,12 @@
     color: #333;
 }
 
+.experience {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #727272;
+}
+
 .imagenes {
     display: flex;
     justify-content: center;
@@ -69,6 +75,22 @@
 .imagenes img:hover {
     transform: translateY(-5px);
 }
+.cta-btn {
+    display: inline-block;
+    background-color: #727272;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
 
 
 
@@ -87,6 +109,7 @@
 }
 
 }
+
 
 
 
