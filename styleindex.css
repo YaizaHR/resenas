@@ -87,23 +87,28 @@
     transform: translateY(-5px);
 }
 .cta-btn {
-    display: flex;
+    display: inline-block; /* Solo ocupa lo que ocupa el texto */
     background-color: #727272;
     color: #fff;
     padding: 12px 28px;
     border-radius: 30px;
     text-decoration: none;
-    justify-content: center;
-    margin-bottom: 40px;
     font-weight: 600;
     transition: 0.3s ease;
+    margin: 20px auto 0 auto; /* centrado horizontal si es bloque */
+    text-align: center; /* asegura que el texto esté centrado */
 }
 
 .cta-btn:hover {
-    background-color: #555;
-    transform: translateY(-2px);
+    background-color: #5A5A5A; /* Gris más oscuro, elegante */
+    transform: translateY(-2px); /* efecto flotante muy ligero */
 }
 
+.cta-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
 
 
 
@@ -122,6 +127,7 @@
 }
 
 }
+
 
 
 
