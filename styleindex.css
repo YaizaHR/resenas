@@ -5,7 +5,7 @@
     flex-direction: column; /* En móvil es más seguro apilar */
     justify-content: center;
     align-items: center;
-    margin: 80px auto;
+    margin: 40px auto;
     position: relative;
     min-height: 70vh;
 }
@@ -103,6 +103,7 @@
 }
 
 }
+
 
 
 
