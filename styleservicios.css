@@ -16,7 +16,75 @@
   text-align: justify; /* Justifica el texto */
   line-height: 1.8;
 }
+.content {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column; /* En móvil es más seguro apilar */
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    position: relative;
+    min-height: 70vh;
+}
 
+.text-box {
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    max-width: 600px;
+    background-color: rgba(255, 245, 230, 0.85); /* blanco hueso con transparencia */
+    display: inline-block;  /* La caja ocupa solo el tamaño del texto */
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.text-box::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #727272;
+    border-radius: 2px;
+}
+
+
+/* Texto */
+.text-box h1 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.2;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.text-box p {
+    font-size: 1rem; /* baja un poco desde 20px */
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #727272;
+    text-aling: left;
+}
+
+.text-box h3 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-aling: left;
+    font-weight: 600;
+    color: #5A5A5A;
+}
+
+.experience {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 30px 40px;
+    margin-top: 5px !important;
+}
 /* CONTENEDOR DE SERVICIOS EN ZIGZAG */
 #servicios {
   display: flex;
@@ -151,3 +219,4 @@
 .cta-container a:hover {
   background-color: rgba(91, 132, 115, 0.95);
 }
+
