@@ -52,21 +52,17 @@
     margin-bottom: 5px;
     font-weight: 700;  /* opcional, mejora legibilidad */
 }
-.horario-container p {
-    font-size: 1rem; /* baja un poco desde 20px */
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: #727272;
-    text-aling: left;
-}
+
 
 .horario-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 1.5rem;          /* letras más grandes que antes */
-  color: #ffffff;
-  line-height: 2;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #727272;
+  text-aling: left;
 }
 
 .horario-container ul li {
@@ -345,5 +341,6 @@
 }
 
 }
+
 
 
